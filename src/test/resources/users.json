@@ -6,5 +6,57 @@
     "phoneNumber": "013051999718",
     "address": "Apt. 322 085 Claudio Trail, Port Jonell, NH 93060-2733",
     "email": "salmansrabon+9997@gmail.com"
+  },
+  {
+    "firstName": "Aaron",
+    "lastName": "Berge",
+    "password": "1234",
+    "phoneNumber": "013061387338",
+    "address": "Suite 719 488 Roger Springs, O'Haraberg, SC 64833",
+    "email": "salmansrabon+3279@gmail.com"
+  },
+  {
+    "firstName": "Roberto",
+    "password": "1234",
+    "phoneNumber": "013026481673",
+    "email": "salmansrabon+1430@gmail.com"
+  },
+  {
+    "firstName": "Evelyn",
+    "lastName": "Cole",
+    "password": "1234",
+    "phoneNumber": "013055248121",
+    "address": "973 Hermiston Islands, Corwinberg, ID 92857-0369",
+    "email": "salmansrabon+9014@gmail.com"
+  },
+  {
+    "firstName": "Rosalee",
+    "lastName": "Wilkinson",
+    "password": "1234",
+    "phoneNumber": "013031669880",
+    "address": "520 Hane Garden, Mercedesstad, RI 24243-5815",
+    "email": "salmansrabon+7790@gmail.com"
+  },
+  {
+    "firstName": "Vickie",
+    "lastName": "Hahn",
+    "password": "1234",
+    "phoneNumber": "013017890431",
+    "address": "6707 Kasi Fall, Whitneyview, WY 95586-7199",
+    "email": "salmansrabon+3451@gmail.com"
+  },
+  {
+    "firstName": "Rozella",
+    "lastName": "Herzog",
+    "password": "1234",
+    "phoneNumber": "013039809571",
+    "address": "Apt. 195 8047 Lind Falls, East Arnoldo, LA 05472",
+    "email": "salmansrabon+7530@gmail.com"
+  },
+  {
+    "firstName": "Antonina",
+    "password": "1234",
+    "phoneNumber": "013064546381",
+    "email": "salmansrabon+1149@gmail.com"
   }
 ]
