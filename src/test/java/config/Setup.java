@@ -9,14 +9,15 @@ import java.time.Duration;
 
 public class Setup {
     public WebDriver driver;
-    @BeforeTest
+    @BeforeTest(groups = "smoke")
     public void setup(){
         driver=new ChromeDriver(); //initialize driver
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.get("https://dailyfinance.roadtocareer.net/");
+//        driver.get("https://dailyfinance.roadtocareer.net/");
+        driver.get("http://localhost:3000");
     }
-    @AfterTest
+    @AfterTest(groups = "smoke")
     public void teardown(){
         //driver.quit();
     }

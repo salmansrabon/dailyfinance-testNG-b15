@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Daily Finance">
+    <test name="Admin user login">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="testrunner.AdminLoginTestRunner"></class>
+        </classes>
+    </test>
+    <test name="User Registration">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="testrunner.SignupTestRunner"></class>
+        </classes>
+    </test>
+</suite>
