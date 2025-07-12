@@ -14,7 +14,7 @@ import utils.Utils;
 import java.io.IOException;
 
 public class SignupTestRunner extends Setup {
-    @Test(priority = 1, description = "User can signup with all data")
+    @Test(priority = 1, description = "User can signup with all data", groups = "smoke")
     public void doSignup() throws IOException, ParseException {
         driver.findElement(By.partialLinkText("Register")).click();
         SignupPage signupPage=new SignupPage(driver);
