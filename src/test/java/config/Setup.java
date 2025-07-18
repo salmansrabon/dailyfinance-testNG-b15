@@ -14,8 +14,8 @@ public class Setup {
         driver=new ChromeDriver(); //initialize driver
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-//        driver.get("https://dailyfinance.roadtocareer.net/");
-        driver.get("http://localhost:3000");
+        driver.get("https://dailyfinance.roadtocareer.net/");
+        //driver.get("http://localhost:3000");
     }
     @AfterTest(groups = "smoke")
     public void teardown(){
