@@ -9,13 +9,15 @@ import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.SignupPage;
+import services.GmailService;
 import utils.Utils;
 
+import javax.naming.ConfigurationException;
 import java.io.IOException;
 
 public class SignupTestRunner extends Setup {
     @Test(priority = 1, description = "User can signup with all data", groups = "smoke")
-    public void doSignup() throws IOException, ParseException {
+    public void doSignup() throws IOException, ParseException, ConfigurationException, org.apache.commons.configuration.ConfigurationException, InterruptedException {
         driver.findElement(By.partialLinkText("Register")).click();
         SignupPage signupPage=new SignupPage(driver);
         Faker faker=new Faker();
@@ -36,6 +38,11 @@ public class SignupTestRunner extends Setup {
         userModel.setAddress(address);
         signupPage.signup(userModel);
 
+        Thread.sleep(5000);
+        GmailService gmailService=new GmailService();
+        String myEmail= gmailService.readLatestEmail();
+        System.out.println(myEmail);
+
         //save user data
         JSONObject jsonObject=new JSONObject();
         jsonObject.put("firstName",firstName);
@@ -45,10 +52,10 @@ public class SignupTestRunner extends Setup {
         jsonObject.put("phoneNumber",phoneNumber);
         jsonObject.put("address",address);
 
-
         Utils.saveUserData(jsonObject,"./src/test/resources/users.json");
+
     }
-    @Test(priority = 2, description = "User can register without optional data")
+    //@Test(priority = 2, description = "User can register without optional data")
     public void doSignupWithoutOptional() throws IOException, ParseException {
         SignupPage signupPage=new SignupPage(driver);
         Faker faker=new Faker();

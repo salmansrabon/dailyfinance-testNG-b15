@@ -1,6 +1,7 @@
 package utils;
 
-import config.UserModel;
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -64,10 +64,10 @@ public class Utils {
         js.executeScript("window.localStorage.setItem('authTokenData', arguments[0]);", authTokenData);
         Thread.sleep(2000);
     }
+    public static void setEnv(String key, String value) throws ConfigurationException {
+        PropertiesConfiguration config=new PropertiesConfiguration("./src/test/resources/config.properties");
+        config.setProperty(key,value);
+        config.save();
+    }
 
-
-
-//    public static void main(String[] args) {
-//        System.out.println(generateRandomNumber(1000,9999));
-//    }
 }
